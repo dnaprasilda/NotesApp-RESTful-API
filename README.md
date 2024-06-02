@@ -1,4 +1,5 @@
 # Integrasi Notes App dengan RESTful API
+Submission: Integrasi Notes App dengan RESTful API
 
 Proyek ini adalah pengembangan lanjutan dari Notes App sebelumnya, dengan menambahkan integrasi dengan RESTful API sebagai sumber data. Aplikasi ini mempertahankan kriteria wajib dari submission sebelumnya dan menambahkan beberapa fitur baru.
 
@@ -9,3 +10,7 @@ Proyek ini adalah pengembangan lanjutan dari Notes App sebelumnya, dengan menamb
 - **Webpack Module Bundler**: Menggunakan Webpack sebagai module bundler untuk mengatur dan membangun proyek JavaScript.
 - **Fetch API**: Memanfaatkan Fetch API untuk berkomunikasi dengan RESTful API dan melakukan operasi CRUD pada catatan.
 - **Indikator Loading**: Aplikasi dilengkapi dengan indikator loading yang menunjukkan ketika aplikasi sedang melakukan permintaan ke server.
+- **Dan saran lainnya.**
+
+## Rating Submission
+🌟🌟🌟🌟
