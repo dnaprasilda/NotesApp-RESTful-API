@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Ketiga</title>
+    <!-- Untuk Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- Untuk GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <header-app id="header-app" ></header-app>
+        <app-bar></app-bar>
+    </div>
+
+    <div class="container">
+        <form id="addNoteForm">
+            <div class="row-control">
+                <label for="title">Judul</label>
+                <input type="text" id="text" placeholder="Masukkan Judul Catatan" spellcheck="false">
+                <div id="titleError" class="error-message"></div>
+
+            </div>
+            <div class="row-control">
+                <label for="desc">Deskripsi</label>
+                <textarea id="desc" placeholder="Masukkan Deskripsi Catatan" rows="4" spellcheck="false"></textarea>
+                <div id="descError" class="error-message"></div>
+
+            </div>
+            <button class="submit">+</button>
+            
+        </form>
+    </div>
+
+    <div id="notes" class="notes">
+        
+    </div>
+</body>
+
+</html>

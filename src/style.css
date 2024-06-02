@@ -1,0 +1,298 @@
+/* Style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Mengatur ukuran dasar font menjadi 10px */
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f4f6; /* Warna latar yang lebih lembut */
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #00108a, rgb(108, 121, 157)); /* Contoh gradasi dari atas ke bawah */
+
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+form {
+  width: 500px;
+  background-color: #ffffff;
+  padding: 2rem; /* Padding yang lebih besar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih halus */
+  border-radius: 10px;
+}
+
+.row-control {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0; /* Margin yang lebih besar */
+}
+
+input,
+textarea { /* Menambahkan textarea untuk deskripsi */
+  padding: 1.5rem; /* Padding yang lebih besar */
+  width: 100%;
+  font-size: 1.8rem; /* Ukuran font yang lebih besar */
+  border: 2px solid #10182c; /* Border yang lebih tebal dan berwarna */
+  border-radius: 5px; /* Menambahkan border radius */
+  background-color: transparent;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa; /* Warna placeholder yang lebih lembut */
+}
+
+.row-control label {
+  font-size: 2rem; /* Ukuran font label yang lebih besar */
+  font-weight: 600;
+  margin-bottom: 1rem; /* Margin bawah untuk label */
+}
+
+.submit {
+  width: auto;
+  padding: 1rem 2rem; /* Padding yang lebih besar */
+  font-size: 2rem; /* Ukuran font yang lebih besar */
+  color: #fff;
+  background-color: #10182c; /* Warna tombol yang serasi dengan navigasi */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s; /* Transisi yang lebih cepat */
+}
+
+.submit:hover {
+  background-color: #f1b722; /* Warna hover yang lebih gelap */
+}
+
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 3rem;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem; /* Padding yang lebih besar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan yang lebih halus */
+  border-radius: 10px; /* Border radius yang lebih besar */
+  padding: 2rem; /* Padding yang lebih besar */
+  transition: transform 0.3s; /* Transisi untuk hover */
+  height: auto; /* Menyesuaikan tinggi kartu */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Efek hover yang menaikkan card */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.card h2 {
+  font-size: 18px; /* Ukuran font yang lebih besar */
+  margin-bottom: 1rem; /* Margin bawah untuk judul */
+}
+
+.card p {
+  font-size: 14px; /* Ukuran font yang lebih besar */
+  color: #666; /* Warna teks yang lebih lembut */
+  line-height: 1.3; /* Tinggi baris yang lebih besar */
+  max-height: 7.5rem; /* Tinggi maksimum untuk 5 baris, asumsikan line-height 1.5rem */
+  overflow-y: auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem; /* Margin atas untuk tombol */
+}
+
+.del,
+.ed {
+  padding: 1rem 2rem; /* Padding yang lebih besar */
+  font-size: 1.6rem; /* Ukuran font yang lebih besar */
+  color: #fff;
+  background: #eb5757; /* Warna latar untuk tombol delete */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transisi yang lebih cepat */
+}
+
+.ed {
+  background: #27ae60; /* Warna latar untuk tombol edit */
+  margin-left: 1rem; /* Jarak antara tombol delete dan edit */
+}
+
+.del:hover,
+.ed:hover {
+  background-color: #cd2c2c; /* Warna hover untuk tombol delete */
+}
+
+.ed:hover {
+  background-color: #219653; /* Warna hover untuk tombol edit */
+}
+
+/* Tombol arsip */
+.archive,
+.unarchive {
+  padding: 0.8rem 1.6rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #3498db; /* Warna biru untuk tombol arsip */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.archive:hover {
+  background-color: #2980b9; /* Warna biru gelap saat hover */
+}
+
+.unarchive {
+  background-color: #f39c12; /* Warna oranye untuk tombol batal arsip */
+}
+
+.unarchive:hover {
+  background-color: #e67e22; /* Warna oranye gelap saat hover */
+}
+
+.loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Transparansi hitam */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-indicator::before {
+  content: '';
+  border: 5px solid #f3f4f6;
+  border-top: 5px solid #3498db; /* Warna biru */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 1.4rem; /* Mengurangi ukuran font untuk layar kecil */
+  }
+
+  h1 {
+    font-size: 2rem; /* Mengurangi ukuran font untuk layar kecil */
+  }
+
+  nav {
+    display: none; /* Sembunyikan navigasi pada layar kecil */
+  }
+
+  .container {
+    padding: 2rem 0; /* Padding yang lebih kecil untuk kontainer pada layar kecil */
+  }
+
+  form {
+    width: 90%; /* Mengurangi lebar form untuk layar kecil */
+  }
+
+  .card {
+    padding: 1rem; /* Padding yang lebih kecil untuk card pada layar kecil */
+  }
+
+  .button-container {
+    justify-content: space-between; /* Menambahkan ruang antara tombol */
+  }
+
+  .del,
+  .ed {
+    padding: 0.8rem 1.5rem; /* Padding yang lebih kecil untuk tombol pada layar kecil */
+    font-size: 1.4rem; /* Ukuran font yang lebih kecil untuk tombol pada layar kecil */
+  }
+
+  footer {
+    font-size: 1.3rem; /* Ukuran font yang lebih kecil untuk footer pada layar kecil */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.2rem; /* Mengurangi ukuran font untuk layar sangat kecil */
+  }
+
+  h1 {
+    display: none; /* Sembunyikan judul h1 pada layar sangat kecil */
+  }
+
+  nav {
+    font-size: 1.8rem; /* Mengurangi ukuran font navigasi untuk layar sangat kecil */
+    padding: 0 1rem; /* Padding yang lebih kecil untuk navigasi pada layar sangat kecil */
+  }
+
+  .container {
+    padding: 2rem 0; /* Padding yang lebih kecil untuk kontainer pada layar sangat kecil */
+  }
+
+  form {
+    width: 90%; /* Mengurangi lebar form untuk layar sangat kecil */
+  }
+
+  .card {
+    padding: 1rem; /* Padding yang lebih kecil untuk card pada layar sangat kecil */
+  }
+
+  .button-container {
+    justify-content: space-between; /* Menambahkan ruang antara tombol */
+  }
+
+  .del,
+  .ed {
+    padding: 0.8rem 1.5rem; /* Padding yang lebih kecil untuk tombol pada layar sangat kecil */
+    font-size: 1.4rem; /* Ukuran font yang lebih kecil untuk tombol pada layar sangat kecil */
+  }
+
+  footer {
+    font-size: 1.3rem; /* Ukuran font yang lebih kecil untuk footer pada layar sangat kecil */
+  }
+}
